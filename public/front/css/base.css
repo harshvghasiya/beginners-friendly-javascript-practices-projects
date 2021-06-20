@@ -1009,31 +1009,8 @@ h6, .h6 {
 }
 
 .client_icon{
-  width: 60px;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 2.5rem;
+  width: 75px;
 }
-
-.client_box{
-  background: linear-gradient(
-    -45deg, #3498db, #3498db);
-  margin: 0 auto;
-  height: 100px;
-  width: 100px;
-  border-radius: 30%;
-  position: relative;
-  margin-bottom: 13px;
-  box-shadow: 0 15px 30px 0 rgb(0 0 0 / 20%);
-}
-
-.client_title{
-    text-align: center;
-    font-size: 25px;
-}
-.auther_image{
-  width: 45px;
-}
+ .read_style{
+    color: #00aff0;
+  }

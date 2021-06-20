@@ -228,7 +228,7 @@ License: http://codecanyon.net/licenses
 .primary-menu-menu ul.dropdown a:hover > i,
 .primary-menu-menu > li.has-megamenu .megamenu ul > li a:hover i {
 	opacity: 1;
-	color: #4cc2c0;
+	color: #00aff0 ;
 }
 
 .primary-menu-menu ul.dropdown li ul.dropdown{
@@ -301,7 +301,7 @@ License: http://codecanyon.net/licenses
 }
 
 .primary-menu-menu > li.has-megamenu .megamenu ul > li:hover a {
-	color: #4cc2c0;
+	color: #00aff0 ;
 }
 
 .primary-menu-menu ul.dropdown li.menu-item-has-children > a > i {
@@ -348,11 +348,11 @@ License: http://codecanyon.net/licenses
 }
 
 .primary-menu-menu li ul.dropdown li:hover > a .indicator{
-	color: #4cc2c0;
+	color: #00aff0 ;
 }
 
 .primary-menu-menu > li:hover > a > .indicator {
-	color: #4cc2c0;;
+	color: #00aff0 ;;
 }
 
 /* 6 - MEGAMENU
