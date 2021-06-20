@@ -45,8 +45,6 @@ Route::group(['as'=>'front.'],function(){
 	Route::get('/blog','BlogController@searchPost')->name('blog.list'); 
 	Route::get('pagination/tag_ajax', 'TagController@tagAjax')->name('tag.tag_ajax'); ;
 	Route::get('/tag/{slug}','TagController@frontTagDetail')->name('tag.detail'); 
-    Route::get('pagination/author_ajax','AuthorController@authorAjax')->name('author.author_ajax'); ;
-	Route::get('/author/{slug}','AuthorController@frontAuthorDetail')->name('author.detail'); 
 	// NEWS DETAILS
 	Route::get('/{slug}','CmsController@detail')->name('cms.details'); 
 

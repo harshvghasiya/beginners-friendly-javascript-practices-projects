@@ -16,7 +16,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot()
     {
         
-        $socialMediaContent = GET_SOCIAL_MEDIA_DATA();
+         $socialMediaContent = GET_SOCIAL_MEDIA_DATA();
         $cmsPages = GET_CMS_PAGE();
         $headerSectionLink = getCmsFooterAndTopSection(\App\Models\Module::CONST_DISPLAY_ON_HEADER);
         $getChildSectionLink=getChildSectionLink(8,\App\Models\Module::CONST_DISPLAY_ON_HEADER);

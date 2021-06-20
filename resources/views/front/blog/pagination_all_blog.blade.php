@@ -13,11 +13,10 @@
   </div>
   <div class="post__content">
     <div class="post__author author vcard">
-      <img src="{{$blog->createdBy->getAdminUserImageUrl()}}" class="auther_image" alt="author">
+      <img src="{{UPLOAD_AND_DOWNLOAD_URL()}}public/front/img/avatar6.png" alt="author">
       Posted by
       <div class="post__author-name fn">
-
-        <a href="{{route('front.author.detail',$blog->createdBy->slug)}}" class="post__author-link">{{$blog->createdBy->name}}</a>
+        <a href="#" class="post__author-link">{{$blog->createdBy->name}}</a>
       </div>
     </div>
     <div class="post__content-info">
@@ -49,10 +48,9 @@
     </a>
   </div>
 </div>
-
 </article>
 @endforeach
-<div class="blog-pagination">
+<div class="blog-pagination" style="padding-bottom: 20px;">
   {!! $blogList->links() !!}
 </div>
 @else

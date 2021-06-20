@@ -8,6 +8,8 @@
 <?php $__env->startSection('style'); ?>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
+
+
 <?php if(isset($getAllService) && $getAllService != null && !$getAllService->multipleCmsPage->isEmpty()): ?>
 <div class="content-wrapper">
   <div class="header-spacer"></div>
@@ -40,17 +42,25 @@
     $lastkeyClass ="";
   }
   ?>
+
+ 
   <?php if($key%2 == 0): ?>
-  <div class="container <?php if($key == 0): ?> second_service <?php endif; ?>">
+ 
+  <div class="container">
     <div class="row <?php if($key == 0): ?> pt120 <?php endif; ?> pb30">
       <div class="col-lg-12">
+
         <div class="product-description-challenge">
+
           <div class="row">
+
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
               <div class="product-description-thumb">
                 <img src="<?php echo e($v->getCmsImageUrl()); ?>" alt="<?php echo e($title); ?>" class="shadow-image">
               </div>
             </div>
+
             <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
               <div class="product-description-content">
                 <div class="heading">
@@ -66,18 +76,26 @@
                 </div>
               </div>
             </div>
+
+
           </div>
+
           <div class="product-description-border"></div>
+
         </div>
       </div>
     </div>
   </div>
+
   <?php else: ?>
-  <div class="container ">
+  <div class="container">
     <div class="row pt80 pb120">
       <div class="col-lg-12">
+
         <div class="product-description-solution">
+
           <div class="row">
+
             <div class="col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-12 col-xs-12">
               <div class="product-description-content">
                 <div class="heading">
@@ -86,6 +104,7 @@
                     <span class="short-line"></span>
                     <span class="long-line"></span>
                   </div>
+
                   <p><?php echo \Str::limit($v->short_description, $limit = 450, $end = '...'); ?>
 
                   </p>
@@ -93,19 +112,27 @@
                 </div>
               </div>
             </div>
+
             <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+
               <div class="product-description-thumb">
                 <img src="<?php echo e($v->getCmsImageUrl()); ?>" alt="<?php echo e($title); ?>" class="shadow-image">
               </div>
             </div>
+
           </div>
+
           <div class="product-description-border"></div>
+
+
         </div>
       </div>
     </div>
   </div>
+
   <?php endif; ?>
   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+ 
 </div>
 <?php endif; ?>
 <?php $__env->stopSection(); ?>

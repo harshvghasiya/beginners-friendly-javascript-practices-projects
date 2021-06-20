@@ -21,7 +21,8 @@
               <div class="contacts-item">
                 <img src="{{UPLOAD_AND_DOWNLOAD_URL()}}public/front/img/contact7.png" alt="phone">
                 <div class="content">
-                  <a href="#" class="sub-title">{{$setting->second_address}}</a>
+                  <a href="#" class="title">Bhavnagar,India</a>
+                  <p class="sub-title">155,Vijayrajnagar</p>
                 </div>
               </div>
             </div>
@@ -116,7 +117,7 @@
           <div class="g-recaptcha" id="feedback-recaptcha" data-sitekey="{{ env('GOOGLE_RECAPTCHA_KEY')  }}"></div>
         </div>
       </div><br>
-      @endif  
+      @endif
       <div class="row">
         <div class="submit-block table">
           <div class="col-lg-3 table-cell">
@@ -146,10 +147,8 @@
 @endsection
 @section('javascript')
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
 <script>
   $(document).ready(function() {
-
     $("#contactUsPageHome").validate({
       rules: {
         name: "required",

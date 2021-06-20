@@ -390,7 +390,7 @@ class Blog extends Model
     ->has('multipleBlogCategory')
     ->with(['multipleBlogCategory','createdBy'=>function($query){
 
-      $query->select('id','name','slug');
+      $query->select('id','name');
 
     },'multipleBlogCategory.category','multipleTag','multipleTag.tag'])
     ->whereHas('multipleBlogCategory',function($rc){
@@ -461,7 +461,7 @@ class Blog extends Model
       ->has('multipleBlogCategory')
       ->with(['multipleBlogCategory','createdBy'=>function($query){
 
-        $query->select('id','name','slug');
+        $query->select('id','name');
 
       },'multipleBlogCategory.category','multipleTag','multipleTag.tag'])
       ->whereHas('multipleBlogCategory',function($rc){

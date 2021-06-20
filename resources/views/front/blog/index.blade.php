@@ -17,7 +17,7 @@
       <h1 class="stunning-header-title">Search Blog</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a href="{{route('front.home')}}">Home</a>
+          <a href="index.html">Home</a>
           <i class="seoicon-right-arrow"></i>
         </li>
         <li class="breadcrumbs-item active">
@@ -49,10 +49,9 @@
       <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
         <main class="main">
           <div id="latest_all_blog"></div>
-        </main>  
+        </main>
       </div>
       @include('front.common.blog-sidebar')
-
     </div>
   </div>
 </div>

@@ -17,7 +17,6 @@
     </div>
     @endif
   </div>
-
   @if(isset($socialMediaContent) && !$socialMediaContent->isEmpty())
   <div class="follow_us">
     <span>Follow us:</span>
@@ -38,20 +37,14 @@
 <header class="header" id="site-header">
   <div class="container">
     <div class="header-content-wrapper">
-      <div class="logo">
-        <a href="{{route('front.home')}}" class="full-block-link"></a>
-        <img src="{{$setting->getSettingLogoImageUrl()}}" alt="{{trans('lang_data.app_name')}}"  class="img-fluid logo_img">
-      </div>
-      <a href="#" id="top-bar-js" class="top-bar-link"><svg style="
-      margin: 20px;
-      width: 25px;
-      height: 25px;
-      min-width: 25px;
-      min-height: 25px;
-      fill: var(--header-font-color);" viewBox="0 0 330 330">
+      <a href="#" id="top-bar-js" class="top-bar-link"><svg class="topbar_icon" viewBox="0 0 330 330">
       <path d="M165 0C74.019 0 0 74.02 0 165.001 0 255.982 74.019 330 165 330s165-74.018 165-164.999S255.981 0 165 0zm0 300c-74.44 0-135-60.56-135-134.999S90.56 30 165 30s135 60.562 135 135.001C300 239.44 239.439 300 165 300z"></path>
       <path d="M164.998 70c-11.026 0-19.996 8.976-19.996 20.009 0 11.023 8.97 19.991 19.996 19.991 11.026 0 19.996-8.968 19.996-19.991 0-11.033-8.97-20.009-19.996-20.009zM165 140c-8.284 0-15 6.716-15 15v90c0 8.284 6.716 15 15 15 8.284 0 15-6.716 15-15v-90c0-8.284-6.716-15-15-15z"></path>
     </svg></a>
+    <div class="logo">
+      <a href="{{route('front.home')}}" class="full-block-link"></a>
+      <img src="{{$setting->getSettingLogoImageUrl()}}" alt="{{trans('lang_data.app_name')}}"  class="img-fluid logo_img">
+    </div>
     <nav id="primary-menu" class="primary-menu">
       <a href='javascript:void(0)' id="menu-icon-trigger" class="menu-icon-trigger showhide">
         <span id="menu-icon-wrapper" class="menu-icon-wrapper" style="visibility: hidden">
@@ -81,7 +74,7 @@
       }else{
         $cmsActiveClass ='';
       }
-      @endphp      
+      @endphp
       @if(!$v->parent->isEmpty())
       <li {{$cmsActiveClass}}><a href="{{route('front.cms.details',$v->slug)}}">{{$v->name}}</a>
         <ul class="dropdown">
@@ -133,7 +126,6 @@
         development company in India we provide front-end development services, web design and
       web development services in India.</p>
     </div>
-
     <div class="widget contacts">
       <h4 class="contacts-title">Get In Touch</h4>
       <div class="contacts-item">
@@ -147,7 +139,7 @@
         <img src="{{UPLOAD_AND_DOWNLOAD_URL()}}public/front/img/contact5.png" alt="phone">
         <div class="content">
           <a href="mailto:{{$setting->email}}" class="title">{{$setting->email}}</a>
-          <a href="mailto:{{$setting->second_email}}" class="sub-title">{{$setting->second_email}}</a>
+          <a href="mailto:{{$setting->second_email}}" class="sub-title">{{$setting->second_email}}</a>   
         </div>
       </div>
       <div class="contacts-item">

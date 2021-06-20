@@ -2,16 +2,17 @@
 	<div class="row">
 		<div class="container">
 			<div class="row">
-				<div class="subscribe scrollme">		
+				<div class="subscribe scrollme">	
 					<div class="col-lg-6 col-lg-offset-5 col-md-6 col-md-offset-5 col-sm-12 col-xs-12">
 						<h4 class="subscribe-title">Email Newsletters!</h4>
-							{{ Form::open([
+							{{Form::open([
 								'id'=>'NewsLetetrForm',
 								'class'=>'FromSubmit subscribe-form',
 								'url'=>route('front.news-letter.store'),
 								'data-redirect_url'=>route('front.home'),
 								'name'=>'socialMedia',
-								'enctype' =>"multipart/form-data" ])}}
+								'enctype' =>"multipart/form-data"
+							])}}
 						<input class="email input-standard-grey input-white" name="email"  placeholder="Your Email Address" type="email">
 						<button type="submit" class="subscr-btn">subscribe
 							<span class="semicircle--right"></span>
@@ -22,7 +23,7 @@
 					<div class="images-block">
 						<img src="{{UPLOAD_AND_DOWNLOAD_URL()}}public/front/img/subscr-gear.png" alt="gear" class="gear">
 						<img src="{{UPLOAD_AND_DOWNLOAD_URL()}}public/front/img/subscr1.png" alt="mail" class="mail">
-						<img src="{{UPLOAD_AND_DOWNLOAD_URL()}}public/front/img/subscr-mailopen.png" alt="mail" class="mail-2">
+					<img src="{{UPLOAD_AND_DOWNLOAD_URL()}}public/front/img/subscr-mailopen.png" alt="mail" class="mail-2">
 					</div>
 				</div>
 			</div>
@@ -82,7 +83,7 @@
 				</div>
 				@endif
 			</div>
-		</div>		
+		</div>
 		<div class="row">
 			<div class="contacts">
 				@if(isset($setting) && !empty($setting->mobile))
@@ -97,7 +98,7 @@
 						</div>
 					</div>
 				</div>
-				@endif				
+				@endif
 				@if(isset($setting) && !empty($setting->email))
 				<div class="col-lg-5 col-md-12 col-sm-12 col-xs-12">
 					<div class="contacts-item">
@@ -105,9 +106,8 @@
 							<svg enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><polyline fill="none" points="  54,17 32,36 10,17 " stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><line fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2" x1="10.9" x2="26" y1="48" y2="36"/><path d="  M32.7,49H13c-2.2,0-4-1.8-4-4V19c0-2.2,1.8-4,4-4h38c2.2,0,4,1.8,4,4v15.5" fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><circle cx="44.9" cy="43.1" fill="none" r="10.1" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><path d="  M44,41.4c0,0-1.3,3.4-0.9,5.1c0.4,1.7,2.6,2.1,3.7,1.1" fill="none" stroke="#f15b26" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"/><g><circle cx="45.4" cy="38.3" fill="#DCE9EE" r="0.9"/><path d="M45.4,37.3c-0.5,0-0.9,0.4-0.9,0.9c0,0.5,0.4,0.9,0.9,0.9s0.9-0.4,0.9-0.9C46.4,37.8,46,37.3,45.4,37.3   L45.4,37.3z" fill="#f15b26"/></g></svg>
 						</div>
 						<div class="content">
-							<a  href="mailto:info@softtechover.com" class="title">info@ghfghgfhgfh.com</a>
+							<a  href="mailto:info@softtechover.com" class="title">info@softtechover.com</a>
 							<a class="sub-title" href="mailto:{{$setting->email}}">{{$setting->email}}</a>
-
 						</div>
 					</div>
 				</div>
@@ -118,8 +118,8 @@
 							<svg enable-background="new 0 0 64 64" version="1.1" viewBox="0 0 64 64" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><polygon fill="none" points="  38.7,36.4 56,32 38.7,27.6 42,22 36.4,25.3 32,8 27.6,25.3 22,22 25.3,27.6 8,32 25.3,36.4 22,42 27.6,38.7 32,56 36.4,38.7 42,42   " stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></polygon><circle cx="32" cy="32" fill="none" r="4" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></circle><path d="  M26.1,53.2c-7.9-2.2-13.9-8.6-15.6-16.7" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M53.5,36.9c-1.8,8.1-8.2,14.6-16.3,16.5" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M36.9,10.5c8.2,1.9,14.7,8.3,16.6,16.6" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path><path d="  M10.5,27.1c1.9-8.2,8.3-14.6,16.4-16.5" fill="none" stroke="#3cb878" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2"></path></svg>
 						</div>
 						<div class="content">
-							<a href="#" class="sub-title">Bhavnagar,India</a>
-							<p class="sub-title">155 , Vijayrajnagar</p>
+							<a href="#" class="title">Bhavnagar,India</a>
+							<p class="sub-title">155,Vijayrajnagar </p>
 						</div>
 					</div>
 				</div>
@@ -130,7 +130,7 @@
 		<div class="footer_bg_one"></div>
 		<div class="footer_bg_two"></div>
 	</div>
-	<div class="sub-footer">		
+	<div class="sub-footer">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -180,21 +180,6 @@
 		L12,18.5 L16.5,14 L21,18.5 L20.25,19.25 L17,16 L17,22 L17,22 Z M16,22 L16,27 L17,27 L17,22 L16,22 L16,22 Z" id="cloud-upload"></path>
 	</symbol>
 </svg>
-<div class="overlay_search">
-	<div class="container">
-		<div class="row">
-			<div class="form_search-wrap">
-				<form>
-					<input class="overlay_search-input" placeholder="Type and hit Enter..." type="text">
-					<a href="#" class="overlay_search-close">
-						<span></span>
-						<span></span>
-					</a>
-				</form>
-			</div>
-		</div>
-	</div>
-</div>
 <script src="{{UPLOAD_AND_DOWNLOAD_URL()}}public/front/js/jquery-3.3.1.js"></script>
 <script src="{{UPLOAD_AND_DOWNLOAD_URL()}}public/front/toaster/toastr.min.js"></script>
 <script src="{{UPLOAD_AND_DOWNLOAD_URL()}}public/front/js/common.js"></script>

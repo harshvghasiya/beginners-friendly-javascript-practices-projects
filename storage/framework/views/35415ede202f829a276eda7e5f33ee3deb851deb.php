@@ -31,8 +31,10 @@
                   </h5>
                   <div class="main-slider-btn-wrap" data-swiper-parallax="-300">        
                   </div>
+
                 </div>
               </div>
+
               <div class="col-lg-6 table-cell">
                 <div class="slider-thumb" data-swiper-parallax="-300" data-swiper-parallax-duration="500">
                   <img src="<?php echo e($value->getCmsImageUrl()); ?>" alt="slider">
@@ -44,13 +46,21 @@
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         <?php endif; ?>
       </div>
+
+      <!--Prev next buttons-->
+
       <svg class="btn-next btn-next-black">
         <use xlink:href="#arrow-right"></use>
       </svg>
+
       <svg class="btn-prev btn-prev-black">
         <use xlink:href="#arrow-left"></use>
       </svg>
+
+      <!--Pagination tabs-->
+
       <div class="slider-slides">
+
        <?php if(!$ourTopWebDevelopmentSolution->multipleCmsPage->isEmpty()): ?>
        <?php $__currentLoopData = $ourTopWebDevelopmentSolution->multipleCmsPage; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=>$value): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
        <a href="#" class="slides-item  bg-<?php echo e($color[$key]); ?>-color">
@@ -66,15 +76,27 @@
     </div>
   </div>
 </div>
+
+
+<!-- ... End Main Slider -->
+
+
+<!-- Info-Box -->
 <?php echo $__env->make('front.common.we-working-on', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
+<!-- Testimonial-slider -->
+
 <div class="container-fluid">
   <div class="row pt80">
     <div class="testimonial-slider scrollme">
       <div class="container">
         <div class="row">
           <div class="col-lg-10 col-lg-offset-1 col-md-8 col-sm-12 col-xs-12">
+
             <div class="testimonial-item">
+              <!-- Slider main container -->
               <div class="swiper-container testimonial__thumb overflow-visible" data-effect="fade" data-loop="false">
+
                 <div class="swiper-wrapper">
                   <div class="testimonial-slider-item swiper-slide">
                     <div class="testimonial-content">
@@ -82,6 +104,7 @@
                       <p class="text" data-swiper-parallax="-200">Top Indian Web Design and Development Services Company,
                       </p>
                       <a href="<?php echo e(route('front.home')); ?>" class="author" data-swiper-parallax="-150">SofttechOver</a>
+
                     </div>
                     <div class="avatar" data-swiper-parallax="-50">
                       <img src="<?php echo e(UPLOAD_AND_DOWNLOAD_URL()); ?>public/front/img/avatar.png" alt="avatar">
@@ -93,6 +116,8 @@
                         In the advanced era of technology, it’s very vital to generate online presence to stay ahead in the business market,
                       </p>
                       <a href="<?php echo e(route('front.home')); ?>" class="author" data-swiper-parallax="-150">SofttechOver</a>
+                      
+
                     </div>
                     <div class="avatar" data-swiper-parallax="-50">
                       <img src="<?php echo e(UPLOAD_AND_DOWNLOAD_URL()); ?>public/front/img/avatar.png" alt="avatar">
@@ -103,6 +128,8 @@
                       <p class="text" data-swiper-parallax="-200">For this purpose, having an eye-catching and SEO friendly business website is very crucial. The reason is that it is one of the best methods to promote your company’s products and services online,
                       </p>
                       <a href="<?php echo e(route('front.home')); ?>" class="author" data-swiper-parallax="-150">SofttechOver</a>
+
+
                     </div>
                     <div class="avatar" data-swiper-parallax="-50">
                       <img src="<?php echo e(UPLOAD_AND_DOWNLOAD_URL()); ?>public/front/img/avatar.png" alt="avatar">
@@ -113,17 +140,22 @@
                       <p class="text" data-swiper-parallax="-200"> This can be accomplished by getting a website developed that features those products and services. We are a design and development company having clients located all over the globe.
                       </p>
                       <a href="<?php echo e(route('front.home')); ?>" class="author" data-swiper-parallax="-150">SofttechOver</a>
+
+
                     </div>
                     <div class="avatar" data-swiper-parallax="-50">
                       <img src="<?php echo e(UPLOAD_AND_DOWNLOAD_URL()); ?>public/front/img/avatar.png" alt="avatar">
                     </div>
                   </div>
                 </div>
+                <!-- If we need pagination -->
                 <div class="swiper-pagination"></div>
+
                 <div class="quote">
                   <i class="seoicon-quotes"></i>
                 </div>
               </div>
+
               <div class="testimonial__thumb-img">
                 <img src="<?php echo e(UPLOAD_AND_DOWNLOAD_URL()); ?>public/front/img/testimonial1.png" alt="image">
               </div>
@@ -134,6 +166,9 @@
     </div>
   </div>
 </div>
+
+<!-- End Testimonial-slider -->
+
 <?php if(isset($bestWebDevelopmentCompany) && $bestWebDevelopmentCompany !=null): ?>
 <div class="container-fluid background-mountains  scrollme">
  <div class="images">
@@ -158,17 +193,20 @@
 </div>
 </div>
 <?php endif; ?>
+
 <div class="container-fluid">
   <div class="row">
     <div class="background-mountains medium-padding120 scrollme">
+
       <div class="images">
         <img src="<?php echo e(UPLOAD_AND_DOWNLOAD_URL()); ?>public/front/img/mountain1.png" alt="mountain">
         <img src="<?php echo e(UPLOAD_AND_DOWNLOAD_URL()); ?>public/front/img/mountain2.png" alt="mountain">
       </div>
+
       <div class="container">
         <div class="row">
          <?php if(isset($clientIndustry) && $clientIndustry !=null): ?>
-         <div>
+         <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
           <div class="heading align-center">
             <h4 class="h1 heading-title"><?php echo e($clientIndustry->name); ?></h4>
             <div class="heading-line">
@@ -192,12 +230,14 @@
         <?php if(!$clientIndustry->multipleCmsPage->isEmpty()): ?>
         <?php $__currentLoopData = $clientIndustry->multipleCmsPage; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=>$v): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
         <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-          <div class="info-box--standard-centered client_box">
+          <div class="info-box--standard-centered">
             <div class="info-box-image">
-              <img src="<?php echo e($v->getCmsImageUrl()); ?>" class="client_icon"  alt="<?php echo e($v->name); ?>">
+              <img src="<?php echo e($v->getCmsImageUrl()); ?>" class="client_icon" style="width: 85px;" alt="<?php echo e($v->name); ?>">
+            </div>
+            <div class="info-box-content">
+              <h4 class="info-box-title"><?php echo e($v->name); ?></h4>
             </div>
           </div>
-          <h4 class="info-box-title client_title"><?php echo e($v->name); ?></h4>
         </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
         <?php endif; ?>
@@ -268,11 +308,18 @@
               </div>
             </div>
           </div>
+
         </div>
+
+
       </div>
     </div>
+
+
   </div>
 </div>
+
+
 <div class="container">
   <div class="row medium-padding80">
     <div class="recent-case align-center">
@@ -301,33 +348,40 @@
               </div>
             </div>
             <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+
           </div>
         </div>
+
         <a href="<?php echo e(route('front.get_port_folio_all')); ?>" class="btn btn-medium btn--dark">
           <span class="text">All Projects</span>
           <span class="semicircle"></span>
         </a>
       </div>
+
     </div>
   </div>
 </div>
+
+<!-- End Recent-case -->
+
 <div class="container">
 
   <div class="row medium-padding80 ">
-    <div class="recent-case align-center">
-      <?php if(isset($homePageBox) && $homePageBox !=null): ?>
-      <?php if(!$homePageBox->multipleCmsPage->isEmpty()): ?>
-      <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
-          <div class="heading align-center">
-            <h4 class="h1 heading-title"><?php echo e($homePageBox->name); ?></h4>
-            <div class="heading-line">
-              <span class="short-line"></span>
-              <span class="long-line"></span>
-            </div>
+    <?php if(isset($homePageBox) && $homePageBox !=null): ?>
+    <?php if(!$homePageBox->multipleCmsPage->isEmpty()): ?>
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
+        <div class="heading align-center">
+          <h4 class="h1 heading-title"><?php echo e($homePageBox->name); ?></h4>
+          <div class="heading-line">
+            <span class="short-line"></span>
+            <span class="long-line"></span>
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="container">
       <div class="row">
         <?php $img=[20,21,22] ?>
         <?php $__currentLoopData = $homePageBox->multipleCmsPage; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=>$v): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -347,11 +401,10 @@
         </div>
         <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
       </div>
-      <?php endif; ?>
-      <?php endif; ?>
     </div>
+    <?php endif; ?>
+    <?php endif; ?>
   </div>
-</div>
 </div>
 <?php $__env->stopSection(); ?>
 

@@ -15,7 +15,7 @@ class HomeController extends Controller
       
         $this->blog = new \App\Models\Blog;
     }
-  
+
     /**
      * [testSize This functin is used to test api data]
      * @return [type] [description]
@@ -43,7 +43,7 @@ class HomeController extends Controller
                                             ->orderBy('id','DESC')->get();       
 
         return response()->json($categoryCount);
-                                   
+                                    
     }
     
     /**

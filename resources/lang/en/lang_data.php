@@ -457,7 +457,6 @@
 "longitude_lable"  =>'Address Longitude',
 "address_name_map_label" =>'Map Address',
 "add_category_title" => 'Category Name',
-"category_listing_label"=>'Category Listing',
-"author_label"=>'Author'
+"category_listing_label"=>'Category Listing'
 
 ]; return $langdata; ?>

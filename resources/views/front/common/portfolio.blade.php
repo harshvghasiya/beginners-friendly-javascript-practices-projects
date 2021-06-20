@@ -26,7 +26,7 @@ $PortfolioCategory = \App\Models\PortfolioCategory::with(['portfolio'])
         <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 sorting-item filter-{{$v->category->slug}}" style="position: absolute; left: 0%; top: 1081.59px;">
           <div class="case-item align-center mb60">
             <div class="case-item__thumb mouseover lightbox shadow animation-disabled">
-              <a  @if($v->url != null) target="_blank" href="{{$v->url}}" @else href="{{$v->getPortfolioImageUrl()}}" data-gall="portfolioGallery" class="venobox preview-link" @endif title="{{$v->title}}"><img src="{{$v->getPortfolioImageUrl()}}" alt="{{$v->title}}"></a> 
+              <a  @if($v->url != null) target="_blank" href="{{$v->url}}" @else href="{{$v->getPortfolioImageUrl()}}" data-gall="portfolioGallery" class="venobox preview-link" @endif title="{{$v->title}}"><img src="{{$v->getPortfolioImageUrl()}}" alt="{{$v->title}}"></a>
             </div>
             <h6 class="case-item__title">
               <a target="_blank" @if($v->url !=null) href="{{$v->url}}" @endif>{{$v->title}}</a>

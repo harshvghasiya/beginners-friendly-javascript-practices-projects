@@ -1,6 +1,7 @@
  <?php 
  $technology = \App\Models\Technology::where('status',\App\Models\Technology::STATUS_ACTIVE)->get();
  ?> 
+
  <?php if(isset($technology) && !$technology->isEmpty()): ?>
  <div class="container-fluid info-boxes pt100">
   <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
@@ -18,6 +19,7 @@
      </p>
    </div>
  </div>
+
  <div class="container">
   <div class="row">
     <?php $__currentLoopData = $technology; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=>$v): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
@@ -37,4 +39,6 @@
   </div>
 </div>
 </div>
+
+
 <?php endif; ?><?php /**PATH C:\laragon\www\newlaunch\resources\views/front/common/we-working-on.blade.php ENDPATH**/ ?>

@@ -42,7 +42,7 @@
   }
   @endphp
   @if($key%2 == 0)
-  <div class="container @if($key == 0) second_service @endif">
+  <div class="container @if($key != 0) second_service @endif">
     <div class="row @if($key == 0) pt120 @endif pb30">
       <div class="col-lg-12">
         <div class="product-description-challenge">
@@ -62,7 +62,7 @@
                   </div>
                   <p> {!! \Str::limit($v->short_description, $limit = 450, $end = '...') !!}
                   </p>
-                  <p><a href="{{route('front.cms.details',$v->slug)}}">Read More</a></p>
+                  <p><a class="read_style" href="{{route('front.cms.details',$v->slug)}}" >Read More</a></p>
                 </div>
               </div>
             </div>
@@ -73,7 +73,7 @@
     </div>
   </div>
   @else
-  <div class="container ">
+  <div class="container">
     <div class="row pt80 pb120">
       <div class="col-lg-12">
         <div class="product-description-solution">
@@ -88,7 +88,7 @@
                   </div>
                   <p>{!! \Str::limit($v->short_description, $limit = 450, $end = '...') !!}
                   </p>
-                  <p><a href="{{route('front.cms.details',$v->slug)}}">Read More</a></p>
+                  <p><a class="read_style" href="{{route('front.cms.details',$v->slug)}}">Read More</a></p>
                 </div>
               </div>
             </div>

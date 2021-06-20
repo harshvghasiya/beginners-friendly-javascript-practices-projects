@@ -8,8 +8,10 @@
 <?php $__env->startSection('style'); ?>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('content'); ?>
+
 <div class="content-wrapper">
   <div class="header-spacer"></div>
+
   <div class="stunning-header stunning-header-bg-lightviolet">
     <div class="stunning-header-content">
       <h1 class="stunning-header-title"><?php echo e($checkCategoryExit->name); ?></h1>
@@ -25,6 +27,8 @@
       </ul>
     </div>
   </div>
+
+
   <div class="overlay_search">
     <div class="container">
       <div class="row">
@@ -40,16 +44,28 @@
       </div>
     </div>
   </div>
+
+  <!-- End Overlay Search-->
+
+  <!-- Blog posts-->
+
   <div class="container">
     <div class="row medium-padding120">
       <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
         <main class="main">
           <div id="latest_all_blog"></div>
         </main>
+
+
       </div>
       <?php echo $__env->make('front.common.blog-sidebar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+
     </div>
   </div>
+
+  <!-- End Blog posts-->
+
+
 </div>
 <?php $__env->stopSection(); ?>
 <?php $__env->startSection('javascript'); ?>
@@ -63,6 +79,7 @@
       $('html, body').animate({scrollTop:50}, 'slow');
 
     });
+
     function fetch_data(page)
     {   
       var categorySlug = "<?php echo e($categorySlug); ?>";

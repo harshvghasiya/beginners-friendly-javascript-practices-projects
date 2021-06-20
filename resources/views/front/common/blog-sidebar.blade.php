@@ -6,8 +6,7 @@ $categoryCount = \App\Models\Category::select('id','slug','name','display_on_hea
 ->withCount('multipleCategoryStatus')
 ->with(["multipleCategoryStatus"=>function($rd){
   $rd->where('status',1);
-}])
-->get();
+}])->get();
 $recentBlog = \App\Models\Blog::select('id','slug','name','category_id','status','image')
 ->has('multipleBlogCategory')
 ->with(['multipleBlogCategory','createdBy'=>function($query){
@@ -16,7 +15,7 @@ $recentBlog = \App\Models\Blog::select('id','slug','name','category_id','status'
 ->whereHas('multipleBlogCategory',function($rc){
   $rc->whereHas('category',function($rcd){
     $rcd->select('id','slug','name','status')
-   ->where('status',\App\Models\Category::STATUS_ACTIVE); 
+    ->where('status',\App\Models\Category::STATUS_ACTIVE); 
   });
 })
 ->where('status',1)
@@ -80,9 +79,9 @@ $tag = \App\Models\Tag::where('status',1)->get();
                 </time>
               </span>
             </div>
-          <div class="recent-posts">
+          <div class="recent-posts" style="display:inline-block;">
            <img src="{{$v->getBlogImageUrl('thumbnail_')}}" class="post-item" alt="{{$v->name}}">
-            <h5 class="post__title entry-title ">
+            <h5 class="post__title entry-title" style="padding:5px;">
               <a href="{{route('front.blog.details',$v->slug)}}" style="font-size: small; font-weight: bold;">{{$v->name}}</a>
             </h5>
           </div>

@@ -166,7 +166,7 @@
       <div class="container">
         <div class="row">
          @if(isset($clientIndustry) && $clientIndustry !=null)
-         <div>
+         <div class="col-md-offset-2 col-sm-12 col-xs-12">
           <div class="heading align-center">
             <h4 class="h1 heading-title">{{$clientIndustry->name}}</h4>
             <div class="heading-line">
@@ -309,7 +309,6 @@
   </div>
 </div>
 <div class="container">
-
   <div class="row medium-padding80 ">
     <div class="recent-case align-center">
       @if(isset($homePageBox) && $homePageBox !=null)
@@ -328,7 +327,6 @@
       <div class="row">
         @php $img=[20,21,22] @endphp
         @foreach($homePageBox->multipleCmsPage as $key=>$v)
-
         <div class="col-lg-4 col-md-4 col-sm-12 col-sx-12">
           <div class="info-box--standard">
             <div class="info-box-image f-none">
@@ -347,6 +345,5 @@
       @endif
     </div>
   </div>
-</div>
 </div>
 @endsection

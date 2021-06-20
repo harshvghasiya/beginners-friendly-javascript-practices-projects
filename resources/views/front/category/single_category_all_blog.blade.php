@@ -16,7 +16,7 @@
       <h1 class="stunning-header-title">{{$checkCategoryExit->name}}</h1>
       <ul class="breadcrumbs">
         <li class="breadcrumbs-item">
-          <a href="index.html">Home</a>
+          <a href="{{route('front.home')}}">Home</a>
           <i class="seoicon-right-arrow"></i>
         </li>
         <li class="breadcrumbs-item active">
@@ -62,7 +62,6 @@
       var page = $(this).attr('href').split('page=')[1];
       fetch_data(page);
       $('html, body').animate({scrollTop:50}, 'slow');
-
     });
     function fetch_data(page)
     {   

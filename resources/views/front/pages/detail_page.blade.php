@@ -36,10 +36,9 @@
         <span class="short-line"></span>
         <span class="long-line"></span>
       </div>
-    </div>
-    
+    </div> 
   </div>
-  {!! $cmsPageDetail->long_description !!}
+  {!! $cmsPageDetail->long_description !!}  
 </div>
 @if($cmsPageDetail->id == \App\Models\Cms::CONST_LARAVEL_DEVELOPMENT)
 <div class="container">

@@ -51,8 +51,7 @@
                  <i class="icofont-user"></i>
                  Posted by
                  <div class="post__author-name fn">
-                  <a href="{{route('front.blog.details',$getBlogDetail->slug)}}" class="post__author-link">{{$getBlogDetail->createdBy->name}}</a>
-                </div>
+                  <a href="{{route('front.blog.details',$getBlogDetail->slug)}}" class="post__author-link">{{$getBlogDetail->createdBy->name}}</a></div>
               </div>
               <span class="post__date">
                 <i class="seoicon-clock"></i>
@@ -80,7 +79,7 @@
                   </div>
               @endif
             </div>
-        </article>
+          </article>
       <div class="blog-details-author">
         <div class="blog-details-author-thumb">
           <img src="{{$settingData->getsettineAuthorImgDynamic()}}" class="authorimg"  alt="{{ $settingData->author_name ? $settingData->author_name : ''}}">
@@ -104,15 +103,15 @@
             <use xlink:href="#arrow-left"></use>
           </svg>
           <div class="btn-content">
-            <div class="btn-content-title">Next Post</div>
+            <div class="btn-content-title">Previous Post</div>
             <p class="btn-content-subtitle">{!! \Str::limit($nextPageUrl->name, $limit = 25, $end = '...') !!}</p>
           </div>
         </a>
-        @endif 
+        @endif
         @if($prevPageUrl != null)
         <a href="{{route('front.blog.details',$prevPageUrl->slug)}}" class="btn-next-wrap">
           <div class="btn-content">
-            <div class="btn-content-title">Previous Post</div>
+            <div class="btn-content-title">Next Post</div>
             <p class="btn-content-subtitle">{!! \Str::limit($prevPageUrl->name, $limit = 25, $end = '...') !!}</p>
           </div>
           <svg class="btn-next">

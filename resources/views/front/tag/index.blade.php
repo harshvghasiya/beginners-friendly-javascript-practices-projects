@@ -45,7 +45,7 @@ $(document).ready(function(){
       event.preventDefault(); 
       var page = $(this).attr('href').split('page=')[1];
       fetch_data(page);
-      $('html, body').animate({scrollTop:50}, 'slow');   
+      $('html, body').animate({scrollTop:50}, 'slow');
     });
     function fetch_data(page)
     {   

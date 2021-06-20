@@ -8,26 +8,38 @@ $categoryCount = \App\Models\Category::select('id','slug','name','display_on_hea
   $rd->where('status',1);
 }])
 ->get();
+
 $recentBlog = \App\Models\Blog::select('id','slug','name','category_id','status','image')
 ->has('multipleBlogCategory')
 ->with(['multipleBlogCategory','createdBy'=>function($query){
+
   $query->select('id','name');
+
 },'multipleBlogCategory.category'])
 ->whereHas('multipleBlogCategory',function($rc){
+
   $rc->whereHas('category',function($rcd){
+
     $rcd->select('id','slug','name','status')
-   ->where('status',\App\Models\Category::STATUS_ACTIVE); 
+    ->where('status',\App\Models\Category::STATUS_ACTIVE); 
+
   });
 })
 ->where('status',1)
 ->orderBy('id','DESC')
 ->take(4)
 ->get();
+
 $tag = \App\Models\Tag::where('status',1)->get();                                                                 
+
 ?>
+
+<!-- Sidebar-->
+
 <div class="col-lg-3 col-lg-offset-1 col-md-4 col-sm-12 col-xs-12">
   <aside aria-label="sidebar" class="sidebar sidebar-right">
     <div class="widget">
+
       <form class="w-search" action="<?php echo e(route('front.blog.search_post')); ?>" method="get">
         <?php if(Request::get('search') !=""): ?>
         <input class="email search input-standard-grey" name="search"  placeholder="Search" type="search" value="<?php echo e(Request::get('search')); ?>">
@@ -39,6 +51,7 @@ $tag = \App\Models\Tag::where('status',1)->get();
         </button>
       </form>
     </div>
+
     <?php if(isset($categoryCount) && !$categoryCount->isEmpty()): ?>
     <div class="widget w-post-category">
       <div class="heading">
@@ -61,6 +74,7 @@ $tag = \App\Models\Tag::where('status',1)->get();
       </div>
     </div>
     <?php endif; ?>
+
     <?php if(isset($recentBlog) && !$recentBlog->isEmpty()): ?>
     <div class="widget w-latest-news">
       <div class="heading">
@@ -70,6 +84,7 @@ $tag = \App\Models\Tag::where('status',1)->get();
           <span class="long-line"></span>
         </div>
       </div>
+
       <div class="latest-news-wrap">
         <?php $__currentLoopData = $recentBlog; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=>$v): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
           <div class="latest-news-item">
@@ -93,6 +108,7 @@ $tag = \App\Models\Tag::where('status',1)->get();
       </div>
     </div>
     <?php endif; ?>
+
     <?php if(isset($tag) && !$tag->isEmpty()): ?>
       <div class="widget w-tags">
         <div class="heading">
@@ -102,12 +118,16 @@ $tag = \App\Models\Tag::where('status',1)->get();
             <span class="long-line"></span>
           </div>
         </div>
+
         <div class="tags-wrap">
           <?php $__currentLoopData = $tag; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $key=>$v): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
            <a href="<?php echo e(route('front.tag.detail',$v->slug)); ?>" class="w-tags-item"><?php echo e($v->title); ?></a>
           <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
+          
         </div>
       </div>
     <?php endif; ?>
   </aside>
-</div><?php /**PATH C:\laragon\www\newlaunch\resources\views/front/common/blog-sidebar.blade.php ENDPATH**/ ?>
+</div>
+
+      <!-- End Sidebar--><?php /**PATH C:\laragon\www\newlaunch\resources\views/front/common/blog-sidebar.blade.php ENDPATH**/ ?>

@@ -9,7 +9,7 @@
 @section('style')
 <style>
     li.main_menu a {
-        color: #00aff0;   
+        color: #00aff0;
         margin-bottom: 5px;
     }
     li.sub_menu_site_map {
