@@ -1,0 +1,133 @@
+ <!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		alert("choose one player and pradict your win")
+		function dice(){
+			for (var i=0;i<10;i++){
+			var e=0;
+			var f=0;
+			var a=Math.floor(Math.random()*6+1);
+			var d=Math.floor(Math.random()*6+1);
+			var b=`dice${a}.png`;
+			var c=`dice${d}.png`;
+			
+			
+			document.getElementById("img1").setAttribute('src',b);
+			document.getElementById("img2").setAttribute('src',c);
+			if (b==c) {
+				document.getElementById('output').innerHTML="DRAW";
+			}else if (a>d) {
+				document.getElementById('output').innerHTML="Playre 1 Won";
+				e=e+1;
+			}else{
+				document.getElementById('output').innerHTML="Playre 2 Won";
+				f=f+1;
+			}
+		}
+		console.log(e);
+		console.log(f);
+	   if(e>f){
+	   	console.log('plyaer 1 won');
+	   }
+	}
+	</script>
+	<link href="https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@200&display=swap" rel="stylesheet">
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			background-color: DarkSlateBlue;
+		}
+		.head1{
+			font-size: 70px;
+			font-family: Grenze Gotisch;
+			color: gold;
+			margin-top: 20px;
+			padding-left: 550px;
+           text-shadow: 5px 3px 5px;  
+		}
+		.img{
+			width: 300px;
+			height: 300px;
+		}
+		.img2{
+			width: 300px;
+			height: 300px;
+		}
+		.head2{
+			
+     		font-size: 70px;
+			font-family: Grenze Gotisch;
+			color: gold;
+			margin-top: 20px; 
+	       text-shadow: 5px 3px 5px; 
+		}
+		.head3{	
+		   font-size: 70px;
+			font-family: Grenze Gotisch;
+			color: gold;
+			margin-top: 20px; 
+         text-shadow: 5px 3px 5px; 
+		}
+		.dice{
+			margin-left: 350px;
+		}
+		.dice2{
+			padding-left: 100px;
+		}
+		.button{
+			width: 200px;
+			font-size: 25px;
+			text-align: center;
+			color: white;
+			background-color: OrangeRed;
+			border: none;
+			outline: none;
+			border-radius: 8px;
+			margin-left: 600px;
+		}
+		#output{
+				font-size: 70px;
+			font-family: Grenze Gotisch;
+			color: gold;
+			padding-left: 580px;
+           text-shadow: 5px 3px 5px;  
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<h1 class="head1">DICE GAME</h1>
+</div>
+<div class="dice">
+<table>
+<tr>
+	<td>
+<div>
+	<h4 class="head2">playre1</h4>
+	<img src="dice1.png" class="img" id="img1">
+</div>
+</td>
+<td>
+<div class="dice2">
+	<h4 class="head3">player2</h4>
+	<img src="dice2.png" class=" img2" id="img2">
+</div>
+</td>
+</tr>
+</table>
+</div><br><br>
+<button class="button" onclick="dice();">CLICK</button><br>
+<p id="output"></p>
+<p id="finalop"></p>
+</body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</html>
+<script type="text/javascript">
+	
+</script>

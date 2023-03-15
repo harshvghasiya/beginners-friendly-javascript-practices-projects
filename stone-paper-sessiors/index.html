@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style type="text/css">
+		* {
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+
+		.main {
+			background-color: rgb(39, 41, 68);
+			height: 100vh;
+		}
+
+		.score {
+			color: white;
+			font-size: 25px;
+			font-family: sans-serif;
+			display: inline-flex;
+			margin-left: 150px;
+			text-align: center;
+			margin-top: 30px;
+		}
+
+		.computer {
+			padding-left: 700px;
+		}
+
+		.game {
+			text-align: center;
+			margin-top: 110px;
+			padding-right: 100px;
+		}
+
+		.but {
+			background-color: Cornsilk;
+			font-size: 20px;
+			width: 100px;
+			border-radius: 8px;
+			outline: none;
+			cursor: pointer;
+			text-align: center;
+			height: 30px;
+			margin-left: 40px;
+		}
+
+		.match h4 {
+			font-size: 25px;
+			font-family: sans-serif;
+			color: white;
+		}
+
+		.player-hand {
+			padding-right: 50px;
+			transform: rotateY(180deg);
+			position: relative;
+		}
+
+		.button {
+			margin-right: 40px;
+		}
+	</style>
+</head>
+
+<body>
+	<section class="main">
+		<div class="score">
+			<div class="player">
+				<h4>Player score</h4>
+				<p id="pp">0</p>
+			</div>
+			<div class="computer">
+				<h4>Computer score</h4>
+				<p id="cp">0</p>
+			</div>
+		</div>
+		<div class="game">
+			<div class="match">
+				<h4 id="massage">Choose one option</h4>
+				<img src="rock.png" class="player-hand" id="ph">
+				<img src="rock.png" class="computer-hand" id="ch">
+			</div>
+			<div class="button">
+				<button class="but" id="rock">Rock</button>
+				<button class="but" id="paper">Paper</button>
+				<button class="but" id="sezer">Sezere</button>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript">
+		function game() {
+			function play() {
+				var player = document.getElementById("ph");
+				var computer = document.getElementById("ch");
+				var btn = document.getElementById("rock");
+				var btn2 = document.getElementById("paper");
+				var btn3 = document.getElementById("sezer");
+				var rock = "rock.png";
+				var paper = "paper.png";
+				var seze = "sezere.png";
+				var coputers = document.getElementById('cp');
+				var players = document.getElementById('pp');
+				var c = 0;
+				var p = 0;
+				var massge = document.getElementById('massage');
+
+				function updatecore() {
+					coputers.innerHTML = c;
+					players.innerHTML = p;
+				};
+				btn.addEventListener('click', function () {
+					var handr = ph.setAttribute('src', rock);
+					var computergame = ["rock.png", "paper.png", "sezere.png"];
+					var x = Math.floor(Math.random() * 3);
+					var y = computergame[x];
+					ch.setAttribute('src', y);
+					if (y === "paper.png") {
+
+						massge.innerHTML = "Computer wins";
+						c++;
+						updatecore();
+						return;
+					} else if (y === "sezere.png") {
+						massge.innerHTML = "Player wins";
+						p++;
+						updatecore();
+						return;
+					} else {
+						massge.innerHTML = "Tie Mathch";
+						return;
+					};
+				});
+				btn2.addEventListener('click', function () {
+					var handp = ph.setAttribute('src', paper);
+					var computergame = ["rock.png", "paper.png", "sezere.png"];
+					var x = Math.floor(Math.random() * 3);
+					var y = computergame[x];
+					ch.setAttribute('src', y);
+					if (y === "sezere.png") {
+
+						massge.innerHTML = "Computer wins";
+						c++;
+						updatecore();
+						return;
+					} else if (y === "rock.png") {
+						massge.innerHTML = "Player wins";
+						p++;
+						updatecore();
+						return;
+					} else {
+						massge.innerHTML = "Match Tie";
+						return;
+					}
+				});
+				btn3.addEventListener('click', function () {
+					var hands = ph.setAttribute('src', seze);
+					var computergame = ["rock.png", "paper.png", "sezere.png"];
+					var x = Math.floor(Math.random() * 3);
+					var y = computergame[x];
+					ch.setAttribute('src', y);
+					if (y === "rock.png") {
+
+						massge.innerHTML = "Computer wins";
+						c++;
+						updatecore();
+						return;
+					} else if (y === "paper.png") {
+						massge.innerHTML = "Player wins";
+						p++;
+						updatecore();
+						return;
+					} else {
+						massge.innerHTML = "Match Tie";
+						return;
+					}
+				});
+
+			};
+			play();
+			alert("left side: player, right side:computer");
+		};
+		game();
+	</script>
+</body>
+
+</html>

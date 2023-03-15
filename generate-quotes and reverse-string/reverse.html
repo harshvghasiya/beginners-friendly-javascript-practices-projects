@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<style type="text/css">
+		#reverse{
+			width: 400px;
+			font-size: 40px;
+			outline-color: skyblue;
+				border: 5px solid black;
+		}
+		#re2{
+			width: 400px;
+			font-size: 40px;
+			outline-color: skyblue;
+			margin-left: 40px;
+			border: 5px solid black;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+<h2 style="text-align: center; font-size: 50px;">REVERSE STRING </h2>
+<center>
+<input type="text"  id="reverse" onkeyup="res();"><input type="text"  id="re2" ></center>
+</body>
+<script type="text/javascript">
+	alert("write correct string in left box.");
+ function res(){
+ 	
+   var string=document.getElementById("reverse").value;
+   var restring="";
+
+   for (var i=string.length-1;i>=0;i--) {
+   	 restring+=string[i];
+   	}
+   
+   	 document.getElementById("re2").value=restring;
+   
+}
+ 
+</script>
+</html>

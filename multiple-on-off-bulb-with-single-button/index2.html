@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			box-sizing: border-box;
+		}
+		.offb{
+			width: 200px;
+			height: 200px;
+		}
+		.bubl{
+			display: inline-flex;
+			position: absolute;
+			top: 150px;
+			left: 250px;
+		}
+		.toggle{
+        text-align: center;
+        margin-right:200px; 
+		}
+		.switch{
+			outline: none;
+			width: 100px;
+			height: 40px;
+			font-size: 20px;
+			cursor: pointer;
+			background-color:  #26267d;
+			color: white;
+			border-radius: 7px;
+		}
+
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="bubl">
+	<img src="offb.jpg" class="offb" id="offb1">
+	<img src="offb.jpg" class="offb" id="offb2">
+	<img src="offb.jpg" class="offb" id="offb3">
+	<img src="offb.jpg" class="offb" id="offb4">
+</div><br><br>
+<div class="toggle">
+	<button class="switch" id="switch" >On Bulb</button>
+</div>
+</body>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(document).on('click', '#switch', function(event) {
+			event.preventDefault();
+			if ($(this).html()=='On Bulb') {
+					$('.offb').attr('src', 'onb.jpg');
+			$(this).html('Off Bulb');
+			}else {
+				$('.offb').attr('src', 'offb.jpg');
+			$(this).html('On Bulb');
+			}
+		
+		});
+	});
+
+</script>
+</html>

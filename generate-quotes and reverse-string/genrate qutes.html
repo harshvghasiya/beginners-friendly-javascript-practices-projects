@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function quote(){
+			var c=["“A room without books is like a body without a soul.― Marcus Tullius Cicero",
+
+"So many books, so little time.― Frank Zappa"
+,"Be yourself; everyone else is already taken-Oscar Wilde",
+ "“You know youre in love when you cant fall asleep because reality is finally better than your dreams.”― Dr. Seuss",
+ "“Be the change that you wish to see in the world.― Mahatma Gandhi”",
+"“No one can make you feel inferior without your consent.”― Eleanor Roosevel"
+,
+
+];
+            var d=c[Math.floor(Math.random()*c.length)];
+           
+            	var b=document.getElementById('qot').innerHTML=d;
+			
+
+		}
+	</script>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		.main{
+			width: 400px;
+			height: 400px;
+			background-color: PeachPuff;
+			border: 8px solid brown;
+			margin-top: 100px;
+			margin-left: 400px;
+		}
+		.button{
+			width: 200px;
+			font-size: 20px;
+			text-align: center;
+			border-radius: 7px;
+			margin-top:40px;
+			margin-left: 90px;
+			outline: none;
+		}
+		#qot{
+			font-size: 25px;
+
+		}
+	</style>
+</head>
+<body>
+<div class="main">
+	<button class="button" onclick="quote();">GENRAATE QUOTE</button><br><br><br>
+	<p id="qot">"Be yourself; everyone else is already taken."
+― Oscar Wilde</p>
+</div>
+</body>
+</html>

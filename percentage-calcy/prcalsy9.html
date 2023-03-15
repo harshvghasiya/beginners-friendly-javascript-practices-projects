@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" >
+		function display() {
+ let a=document.getElementById('sub1').value;
+  let b=document.getElementById('sub2').value;
+   let c=document.getElementById('sub3').value;
+    let d=document.getElementById('sub4').value;
+     let e=document.getElementById('sub5').value;
+      let f=document.getElementById('sub6').value;
+let total=parseFloat(a)+parseFloat(b)+parseFloat(c)+parseFloat(d)+parseFloat(e)+parseFloat(f);
+let y= total/600*100;
+document.getElementById('ans').innerHTML=y;
+window.alert(y);
+if(y>=90 && y<=100){
+	grade='A1';
+	
+	document.getElementById('ans').innerHTML=`your Persentage is ${y}%,your total marks is ${total},youre grade is ${grade}, you are pass CONRATULATION...!`;
+}else
+if(y <  90 && y>=80){
+	grade='A2';
+	document.getElementById('ans').innerHTML=`your Persentage is ${y}%,your total marks is ${total},youre grade is ${grade}, you are pass CONRATULATION...!`;
+}else
+if(y<70 && y>=60){
+	grade='B1';
+	document.getElementById('ans').innerHTML=`your Persentage is ${y}%,your total marks is ${total},youre grade is ${grade}, you are pass CONRATULATION...!`;
+}else
+if(y<60 && y>=50){
+	grade='B2';
+	document.getElementById("ans").innerHTML=`your Persentage is ${y}%,your total marks is ${total},youre grade is ${grade}, you are pass CONRATULATION...!`;
+	}else
+if(y<50 && y>=40){
+		grade='C1';
+	document.getElementById("ans").innerHTML=`your Persentage is ${y}%your total marks is ${total},youre grade is ${grade}, you are pass CONRATULATION...!`;
+}
+else{
+	document.getElementById("ans").innerHTML=`your Persentage is ${y}%,your total marks is ${total},youre grade is ${grade} you are Filed SORRY BETTER LUCK NEXT TIME...!`;
+}
+}
+	</script>
+	<title>prcalsy</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		body{
+			background-color: Turquoise;
+			background-position: center;
+		}
+    .main{
+     background-color: black;
+     border-radius: 12px;
+     width: 650px;
+     height: 510px;
+     margin-top: 110px;
+     box-shadow: 10px 15px 10px;
+
+
+		}
+	.rite{
+		color: Turquoise;
+		font-size: 40px;
+	}
+	.rite:hover{
+		font-size: 45px;
+	}
+	.head{
+		float: left;
+		width: 325px;
+		padding-top: 120px;
+		height: 300px;
+	}
+	.clacy{
+		width: 325px; 
+	}
+	.sub{
+		 background:none;
+		outline:none;
+		border: none;
+		color: white;
+		font-size: 25px;
+		border-bottom:1px solid white;
+		width: 230px;
+		padding-top: 30px;
+	}
+	.sub:hover{
+     border-bottom: 1px solid Turquoise;
+	}
+	.button{
+		background-color: Turquoise;
+		font-size: 25px;
+		outline: none;
+		border: none;
+		border-radius: 8px;
+		width: 150px;
+	}
+	.button:hover{
+		opacity: 0.7;
+	}
+	.ans{
+		color: white ;
+		font-size: 25px;
+	}
+	#ad{
+		animation-iteration-count: infinite;
+		animation-name: ad;
+		animation-duration: 2.5s;
+	}
+	@keyframes ad{
+		0%{
+			color:Turquoise;
+		}
+		50%{
+			color: black;
+		}
+		100%{
+			color: Turquoise;
+		}
+	}
+	</style>
+</head>
+<body>
+<center>
+<div class="main">
+	<div class="head">
+		<h2 class="rite" id="ad">Persentage<br> 
+		calcy</h2>
+	</div>
+	<div class="calcy">
+		<input type="text" placeholder="physics" id="sub1" class="sub"><br>
+		<input type="text" placeholder="chemistry"  id="sub2" class="sub"><br>
+		<input type="text" placeholder="math"  id="sub3" class="sub"><br>
+		<input type="text" placeholder="biology"  id="sub4" class="sub"><br>
+		<input type="text" placeholder="computer"  id="sub5" class="sub"><br>
+		<input type="text" placeholder="english"  id="sub6" class="sub"><br><br>
+
+		<button class="button" onclick="display();">Get Value</button><br><br>
+	</div>
+	<div>
+		<p id="ans" class="ans"></p>
+	</div>
+</div>
+</center>
+</body>
+</html>

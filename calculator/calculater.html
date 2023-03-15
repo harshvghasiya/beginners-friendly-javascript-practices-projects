@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function clear(){
+			var a=form.xyz.getElementsById('harsh').value;
+			a.shift();
+		}
+	</script>
+	<style type="text/css">
+		*{
+			margin:0px;
+			padding: 0px;
+		}
+		body{
+			background-image: url(claci.jpg);
+			background-attachment: fixed;
+			background-size: cover;
+			background-position: center;
+		}
+		.body{
+			width: 342px;
+			height: 540px;
+			margin-top:50px;
+			margin-left: 300px;
+			background-color: black;
+			border: 3px solid black;
+
+		}
+		.screen{
+			width: 338px;
+			height: 100px;
+			font-size: 30px;
+			outline: none;
+		}
+		.c{
+			width: 82.5px;
+			color:black;
+			font-size: 25px;
+			height: 87.5px;
+			
+		}
+
+	</style>
+</head>
+<body>
+<div class="body">
+	<form name="form">
+		<input type="text" name="xyz" class="screen" id="harsh">
+
+		<input type="button" value="1" class="c" onclick="form.xyz.value += '1'">
+		<input type="button" value="2" class="c" onclick="form.xyz.value += '2'">
+		<input type="button" value="3" class="c" onclick="form.xyz.value += '3'" >
+		<input type="button" value="4" class="c" onclick="form.xyz.value += ''">
+		<input type="button" value="5" class="c" onclick="form.xyz.value += '5'">
+		<input type="button" value="6" class="c" onclick="form.xyz.value += '6'">
+		<input type="button" value="7" class="c" onclick="form.xyz.value += '7'">
+		<input type="button" value="8" class="c" onclick="form.xyz.value += '8'">
+		<input type="button" value="9" class="c" onclick="form.xyz.value += '9'">
+		<input type="button" value="0" class="c" onclick="form.xyz.value += '0'">
+		<input type="button" value="*" class="c" onclick="form.xyz.value += '*'">
+		<input type="button" value="+" class="c" onclick="form.xyz.value += '+'">
+		<input type="button" value="-" class="c" onclick="form.xyz.value += '-'">
+		<input type="button" value="/" class="c" onclick="form.xyz.value += '/'">
+		<input type="button" value="c" class="c" onclick="clear();" >
+		<input type="button" value="%" class="c" onclick="form.xyz.value += '%'">		
+		<input type="button" value="ce" class="c" onclick="form.xyz.value =null">
+		<input type="button" value="^" class="c" onclick="form.xyz.value += '^'">
+		<input type="button" value="=" class="c" onclick="form.xyz.value=eval(form.xyz.value)">	
+		<input type="button" value="n" class="c">
+
+		
+	
+</form>
+</div>
+</body>
+</html>
