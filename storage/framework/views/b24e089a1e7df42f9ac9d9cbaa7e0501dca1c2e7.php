@@ -1,1 +1,0 @@
-<?php /**PATH C:\laragon\www\makeupnoor-master\resources\views/layouts/footer.blade.php ENDPATH**/ ?>

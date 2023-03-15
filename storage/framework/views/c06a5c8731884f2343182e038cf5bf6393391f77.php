@@ -1,1 +1,0 @@
-<?php /**PATH /var/www/html/makeupnoor/resources/views/layouts/head.blade.php ENDPATH**/ ?>
